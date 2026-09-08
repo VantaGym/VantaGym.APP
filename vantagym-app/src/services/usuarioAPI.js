@@ -4,7 +4,7 @@ const UsuarioAPI = {
     async obterAsync(usuarioID) {
         try {
             const response = await HTTPClient.get(`/Usuario/Obter/${usuarioID}`)
-            return resposta.data
+            return response.data
         } catch (error) {
             console.error("Erro ao obter usuário", error)
             throw error
