@@ -1,0 +1,50 @@
+.sidebar_conteudo {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 17%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.pagina_conteudo {
+    margin-left: 17%;
+    width: 83%;
+    min-height: 100vh;
+}
+
+.sidebar_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+
+    & .logo {
+        width: 60%;
+        margin: 15px 0 5px 0;
+    }
+
+    & .linha {
+        width: 100%;
+        margin: 0;
+        color: rgba(250, 234, 214, 0.4);
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar_conteudo {
+        width: 56px;
+    }
+
+    .pagina_conteudo {
+        margin-left: 56px;
+        width: calc(100% - 56px);
+    }
+
+    .sidebar_header .logo {
+        width: 42px;
+        margin: 12px 0 8px 0;
+    }
+}

@@ -1,0 +1,248 @@
+.pagina {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #050505;
+    color: #ffffff;
+}
+
+.conteudo {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 32px 40px;
+}
+
+.boasVindas {
+    margin-bottom: 20px;
+}
+
+.boasVindas span {
+    color: #d4af37;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.boasVindas h1 {
+    margin: 7px 0 5px 0;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.boasVindas p {
+    margin: 0;
+    color: #777777;
+    font-size: 13px;
+}
+
+.treinoHoje {
+    width: 100%;
+    min-height: 130px;
+    box-sizing: border-box;
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(110deg, rgba(212, 175, 55, 0.09), #0c0c0c 35%);
+    border: 1px solid #282318;
+    border-left: 3px solid #b98a25;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    transition: 0.2s;
+}
+
+.treinoHoje:hover {
+    border-color: #4a3b18;
+    border-left-color: #d4af37;
+}
+
+.treinoInformacoes span {
+    color: #d4af37;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.treinoInformacoes h2 {
+    margin: 8px 0 6px 0;
+    color: #eeeeee;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.treinoInformacoes p {
+    margin: 0;
+    color: #666666;
+    font-size: 12px;
+}
+
+.botaoTreino {
+    min-width: 140px;
+    height: 43px;
+    padding: 0 22px;
+    background: linear-gradient(135deg, #e8c34b, #b78924);
+    border: none;
+    border-radius: 5px;
+    color: #080808;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botaoTreino:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(212, 175, 55, 0.15);
+}
+
+.cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.card {
+    min-height: 110px;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #090909;
+    border: 1px solid #202020;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.card:hover {
+    background-color: #0d0d0d;
+    border-color: #4a3b18;
+    transform: translateY(-2px);
+}
+
+.cardTopo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardTopo span {
+    color: #777777;
+    font-size: 11px;
+}
+
+.cardIcone {
+    color: #8e7429;
+    font-size: 20px;
+}
+
+.card h2 {
+    margin: 12px 0 7px 0;
+    color: #d4af37;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.card p {
+    margin: 0;
+    color: #505050;
+    font-size: 10px;
+}
+
+.atividade {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px;
+    background-color: #080808;
+    border: 1px solid #202020;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.atividade:hover {
+    border-color: #332b18;
+}
+
+.atividadeTopo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #1c1c1c;
+}
+
+.atividadeTopo span {
+    color: #d4af37;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.atividadeTopo h2 {
+    margin: 6px 0 0 0;
+    color: #eeeeee;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.atividadeTopo button {
+    padding: 9px 15px;
+    background-color: transparent;
+    border: 1px solid #4a3b18;
+    border-radius: 5px;
+    color: #d4af37;
+    font-size: 11px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.atividadeTopo button:hover {
+    background-color: #11100c;
+    border-color: #8e7429;
+}
+
+.atividadeDados {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.atividadeDados div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.atividadeDados span {
+    color: #555555;
+    font-size: 10px;
+}
+
+.atividadeDados p {
+    margin: 0;
+    color: #c2c2c2;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .conteudo {
+        width: 100%;
+        padding: 20px 14px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .treinoHoje {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .botaoTreino {
+        width: 100%;
+    }
+}

@@ -43,7 +43,7 @@ const FichaTreinoAPI = {
             }
             const response = await HTTPClient.put(`/FichaTreino/Atualizar`, ficha)
             return response.data
-        } catch {
+        } catch (error) {
             console.error("Erro ao atualizar ficha de treino:", error)
             throw error
         }
