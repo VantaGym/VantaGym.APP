@@ -38,15 +38,14 @@ const ExercicioAPI = {
         }
     },
 
-    async atualizarAsync(id, nome, series, repeticoes, grupoMuscular, fichaTreinoID) {
+    async atualizarAsync(id, nome, series, repeticoes, grupoMuscular) {
         try {
             const exercicio = {
                 ID: id,
                 Nome: nome,
                 Series: series,
                 Repeticoes: repeticoes,
-                GrupoMuscular: parseInt(grupoMuscular),
-                FichaTreinoID: parseInt(fichaTreinoID)
+                GrupoMuscular: parseInt(grupoMuscular)
             }
             const response = await HTTPClient.put(`/Exercicio/Atualizar`, exercicio)
             return response.data

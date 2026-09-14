@@ -1,20 +1,20 @@
-import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import styles from "./Login.module.css";
-import LogoVantaGym from "../../assets/logo_png.png";
-import Modal from "react-bootstrap/Modal";
-import { MdEmail, MdLock, MdVisibility, MdVisibilityOff } from "react-icons/md";
+import { useState } from "react"
+import { useNavigate, Link } from "react-router-dom"
+import style from "./Login.module.css"
+import LogoVantaGym from "../../assets/logo_png.png"
+import Modal from "react-bootstrap/Modal"
+import { MdEmail, MdLock, MdVisibility, MdVisibilityOff } from "react-icons/md"
 
 
 export function Login() {
     const navigate = useNavigate();
 
-    const [email, setEmail] = useState('');
-    const [senha, setSenha] = useState('');
-    const [erro, setErro] = useState('');
-    const [carregando, setCarregando] = useState(false);
-    const [mostrarModal, setMostrarModal] = useState(false);
-    const [mostrarSenha, setMostrarSenha] = useState(false);
+    const [email, setEmail] = useState('')
+    const [senha, setSenha] = useState('')
+    const [erro, setErro] = useState('')
+    const [carregando, setCarregando] = useState(false)
+    const [mostrarModal, setMostrarModal] = useState(false)
+    const [mostrarSenha, setMostrarSenha] = useState(false)
 
     const handleEntrar = async (e) => {
         e.preventDefault();
@@ -40,43 +40,43 @@ export function Login() {
     };
 
     return (
-        <div className={styles.pagina}>
+        <div className={style.pagina}>
 
-            <div className={styles.conteudo}>
+            <div className={style.conteudo}>
 
-                <form className={styles.formulario} onSubmit={handleEntrar}>
-                    <img src={LogoVantaGym} alt="VantaGym" className={styles.logoImagem} />
+                <form className={style.formulario} onSubmit={handleEntrar}>
+                    <img src={LogoVantaGym} alt="VantaGym" className={style.logoImagem} />
 
-                    {erro && <p className={styles.mensagemErro}>{erro}</p>}
+                    {erro && <p className={style.mensagemErro}>{erro}</p>}
 
-                    <div className={styles.form}>
-                        <div className={styles.campo}>
-                            <MdEmail className={styles.iconeInput} />
+                    <div className={style.form}>
+                        <div className={style.campo}>
+                            <MdEmail className={style.iconeInput} />
                             <input
                                 id="email"
                                 type="email"
                                 placeholder="e-mail"
-                                className={styles.input}
+                                className={style.input}
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 autoComplete="username"
                             />
                         </div>
 
-                        <div className={styles.campo}>
-                            <MdLock className={styles.iconeInput} />
+                        <div className={style.campo}>
+                            <MdLock className={style.iconeInput} />
                             <input
                                 id="senha"
                                 type={mostrarSenha ? "text" : "password"}
                                 placeholder="senha"
-                                className={`${styles.input} ${styles.inputSenha}`}
+                                className={`${style.input} ${style.inputSenha}`}
                                 value={senha}
                                 onChange={(e) => setSenha(e.target.value)}
                                 autoComplete="current-password"
                             />
                             <button
                                 type="button"
-                                className={styles.botaoOlho}
+                                className={style.botaoOlho}
                                 onClick={() => setMostrarSenha(!mostrarSenha)}
                                 aria-label={mostrarSenha ? "Ocultar senha" : "Mostrar senha"}>
                                 {mostrarSenha ? <MdVisibilityOff /> : <MdVisibility />}
@@ -85,13 +85,13 @@ export function Login() {
 
                         <button
                             type="submit"
-                            className={styles.botaoEntrar}
+                            className={style.botaoEntrar}
                             disabled={carregando}
                         >
                             {carregando ? "Entrando..." : "Entrar"}
                         </button>
 
-                        <p className={styles.cadastro}>
+                        <p className={style.cadastro}>
                             Ainda não possui uma conta?{" "}
                             <Link to="/cadastro">
                                 Cadastre-se
@@ -99,7 +99,7 @@ export function Login() {
                         </p>
                     </div>
 
-                    <p className={styles.rodape}>
+                    <p className={style.rodape}>
                         © 2026 VantaGym
                     </p>
                 </form>
@@ -108,16 +108,16 @@ export function Login() {
             <Modal show={mostrarModal}
                 backdrop="static"
                 keyboard={false}
-                dialogClassName={styles.modalPosicao}
-                contentClassName={styles.modalConteudo}
+                dialogClassName={style.modalPosicao}
+                contentClassName={style.modalConteudo}
             >
-                <Modal.Header className={styles.modalHeader}>
-                    <Modal.Title className={styles.modalTitulo}>
+                <Modal.Header className={style.modalHeader}>
+                    <Modal.Title className={style.modalTitulo}>
                         Bem-vindo ao VantaGym
                     </Modal.Title>
                 </Modal.Header>
 
-                <Modal.Body className={styles.modalBody}>
+                <Modal.Body className={style.modalBody}>
                     Login realizado com sucesso.
                 </Modal.Body>
             </Modal>

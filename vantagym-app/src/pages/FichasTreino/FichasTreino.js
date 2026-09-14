@@ -1,21 +1,20 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import styles from "./FichasTreino.module.css";
-import { Sidebar } from "../../components/Sidebar/Sidebar";
-import { Topbar } from "../../components/Topbar/Topbar";
-import { FaPlus, FaEye, FaTrash, FaPlay } from "react-icons/fa";
-import FichaTreinoAPI from "../../services/fichaTreinoAPI";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
+import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
+import style from "./FichasTreino.module.css"
+import { Sidebar } from "../../components/Sidebar/Sidebar"
+import { Topbar } from "../../components/Topbar/Topbar"
+import { FaPlus, FaEye, FaTrash, FaPlay } from "react-icons/fa"
+import FichaTreinoAPI from "../../services/fichaTreinoAPI"
+import Modal from "react-bootstrap/Modal"
+import Button from "react-bootstrap/Button"
 
 export function FichasTreino() {
     const navigate = useNavigate();
 
-    const [fichas, setFichas] = useState([]);
-    const [mostrarModal, setMostrarModal] = useState(false);
-    const [mostrarModalSucesso, setMostrarModalSucesso] = useState(false);
-    const [fichaSelecionada, setFichaSelecionada] = useState(null);
-
+    const [fichas, setFichas] = useState([])
+    const [mostrarModal, setMostrarModal] = useState(false)
+    const [mostrarModalSucesso, setMostrarModalSucesso] = useState(false)
+    const [fichaSelecionada, setFichaSelecionada] = useState(null)
 
     const carregarFichas = async () => {
         try {
@@ -24,7 +23,7 @@ export function FichasTreino() {
         } catch (error) {
             console.error("Erro ao carregar fichas:", error);
         }
-    }
+    };
 
     const handleClickDeletar = (ficha) => {
         setFichaSelecionada(ficha);
@@ -60,11 +59,11 @@ export function FichasTreino() {
     }, []);
 
     return (
-        <div className={styles.pagina}>
+        <div className={style.pagina}>
             <Sidebar>
                 <Topbar>
-                    <main className={styles.conteudo}>
-                        <div className={styles.cabecalho}>
+                    <main className={style.conteudo}>
+                        <div className={style.cabecalho}>
                             <div>
                                 <span>MEUS TREINOS</span>
                                 <h1>Fichas de treino</h1>
@@ -72,45 +71,53 @@ export function FichasTreino() {
                             </div>
 
                             <button
-                                className={styles.botaoCriar}
+                                className={style.botaoCriar}
                                 onClick={() => navigate("/fichasTreino/criar")}><FaPlus />
                                 Nova ficha
                             </button>
                         </div>
 
-                        <div className={styles.tabela}>
-                            <div className={styles.tabelaCabecalho}>
+                        <div className={style.tabela}>
+                            <div className={style.tabelaCabecalho}>
                                 <span>Nome</span>
-                                <span className={styles.centralizado}>Grupo muscular</span>
-                                <span className={styles.centralizado}>Ações</span>
+                                <span className={style.centralizado}>Grupo muscular</span>
+                                <span className={style.centralizado}>Ações</span>
                             </div>
 
                             {fichas.map((ficha) => (
-                                <div className={styles.tabelaLinha} key={ficha.id}>
-                                    <span className={styles.nomeFicha}>{ficha.nome}</span>
-                                    <span className={styles.gruposMusculares}>
+                                <div className={style.tabelaLinha} key={ficha.id}>
+                                    <span className={style.nomeFicha}>{ficha.nome}</span>
+
+                                    <span className={style.gruposMusculares}>
                                         {ficha.gruposMusculares?.join(" - ")}
                                     </span>
 
-                                    <div className={styles.acoes}>
-                                        <div className={styles.acao}>
+                                    <div className={style.acoes}>
+                                        <div className={style.acao}>
                                             <button
-                                                className={styles.botaoIniciar}
+                                                className={style.botaoIniciar}
                                                 onClick={() => navigate(`/registrarTreino/${ficha.id}`)}><FaPlay />
                                             </button>
                                             <span>Iniciar Treino</span>
                                         </div>
 
-                                        <div className={styles.acao}>
+                                        <div className={style.acao}>
                                             <button
                                                 onClick={() => navigate(`/fichasTreino/${ficha.id}`)}><FaEye />
                                             </button>
                                             <span>Visualizar e Editar Ficha</span>
                                         </div>
 
-                                        <div className={styles.acao}>
+                                        <div className={style.acao}>
                                             <button
-                                                className={styles.botaoExcluir}
+                                                onClick={() => navigate(`/exercicios/criar/${ficha.id}`)}><FaPlus />
+                                            </button>
+                                            <span>Adicionar Novo Exercício</span>
+                                        </div>
+
+                                        <div className={style.acao}>
+                                            <button
+                                                className={style.botaoExcluir}
                                                 onClick={() => handleClickDeletar(ficha)}><FaTrash />
                                             </button>
                                             <span>Excluir</span>
@@ -120,13 +127,13 @@ export function FichasTreino() {
                             ))}
 
                             {fichas.length === 0 && (
-                                <div className={styles.vazio}>
+                                <div className={style.vazio}>
                                     Nenhuma ficha encontrada.
                                 </div>
                             )}
                         </div>
 
-                        <Modal show={mostrarModal} onHide={handleFecharModal} contentClassName={styles.modal}>
+                        <Modal show={mostrarModal} onHide={handleFecharModal} contentClassName={style.modal}>
                             <Modal.Header closeButton>
                                 <Modal.Title>Confirmar</Modal.Title>
                             </Modal.Header>
@@ -136,17 +143,17 @@ export function FichasTreino() {
                             </Modal.Body>
 
                             <Modal.Footer>
-                                <Button variant="dark" className={styles.botaoCancelar} onClick={handleFecharModal}>
+                                <Button variant="dark" className={style.botaoCancelar} onClick={handleFecharModal}>
                                     Cancelar
                                 </Button>
 
-                                <Button variant="danger" className={styles.botaoDeletar} onClick={handleDeletar}>
+                                <Button variant="danger" className={style.botaoDeletar} onClick={handleDeletar}>
                                     Deletar
                                 </Button>
                             </Modal.Footer>
                         </Modal>
 
-                        <Modal show={mostrarModalSucesso} onHide={handleFecharModalSucesso} contentClassName={styles.modal}>
+                        <Modal show={mostrarModalSucesso} onHide={handleFecharModalSucesso} contentClassName={style.modal}>
                             <Modal.Header closeButton>
                                 <Modal.Title>Sucesso</Modal.Title>
                             </Modal.Header>

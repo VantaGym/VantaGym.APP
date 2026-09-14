@@ -1,21 +1,20 @@
-import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import style from "./RegistrarTreino.module.css";
-import { Sidebar } from "../../components/Sidebar/Sidebar";
-import { Topbar } from "../../components/Topbar/Topbar";
-import { FaArrowLeft, FaCheck } from "react-icons/fa";
-import FichaTreinoAPI from "../../services/fichaTreinoAPI";
-import HistoricoTreinoAPI from "../../services/historicoTreinoAPI";
-import Modal from "react-bootstrap/Modal";
+import { useEffect, useState } from "react"
+import { useNavigate, useParams } from "react-router-dom"
+import style from "./RegistrarTreino.module.css"
+import { Sidebar } from "../../components/Sidebar/Sidebar"
+import { Topbar } from "../../components/Topbar/Topbar"
+import { FaArrowLeft, FaCheck } from "react-icons/fa"
+import FichaTreinoAPI from "../../services/fichaTreinoAPI"
+import HistoricoTreinoAPI from "../../services/historicoTreinoAPI"
+import Modal from "react-bootstrap/Modal"
 
 export function RegistrarTreino() {
     const navigate = useNavigate();
     const { id } = useParams();
-
-    const [ficha, setFicha] = useState(null);
-    const [exercicios, setExercicios] = useState([]);
-    const [mostrarModal, setMostrarModal] = useState(false);
-    const [mensagemErro, setMensagemErro] = useState("");
+    const [ficha, setFicha] = useState(null)
+    const [exercicios, setExercicios] = useState([])
+    const [mostrarModal, setMostrarModal] = useState(false)
+    const [mensagemErro, setMensagemErro] = useState("")
 
     const carregarFicha = async () => {
         try {

@@ -1,16 +1,16 @@
-import { useState } from "react";
-import { Sidebar } from "../../components/Sidebar/Sidebar";
-import { Topbar } from "../../components/Topbar/Topbar";
-import style from "./NovoFichaTreino.module.css";
-import { useNavigate } from "react-router-dom";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
-import FichaTreinoAPI from "../../services/fichaTreinoAPI";
+import { useState } from "react"
+import { Sidebar } from "../../components/Sidebar/Sidebar"
+import { Topbar } from "../../components/Topbar/Topbar"
+import style from "./NovoFichaTreino.module.css"
+import { useNavigate } from "react-router-dom"
+import Form from "react-bootstrap/Form"
+import Button from "react-bootstrap/Button"
+import Modal from "react-bootstrap/Modal"
+import FichaTreinoAPI from "../../services/fichaTreinoAPI"
 
 export function NovoFichaTreino() {
-    const [nome, setNome] = useState('');
-    const [mostrarModal, setMostrarModal] = useState(false);
+    const [nome, setNome] = useState('')
+    const [mostrarModal, setMostrarModal] = useState(false)
 
     const navigate = useNavigate();
 

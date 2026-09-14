@@ -5,6 +5,8 @@ import { FichasTreino } from "./pages/FichasTreino/FichasTreino";
 import { NovoFichaTreino } from "./pages/NovoFichaTreino/NovoFichaTreino"
 import { VisualizarFichaTreino } from "./pages/VisualizarFichaTreino/VisualizarFichaTreino"
 import { RegistrarTreino } from "./pages/RegistrarTreino/RegistrarTreino"
+import { NovoExercicio } from "./pages/NovoExercicio/NovoExercicio"
+import { EditarExercicio } from "./pages/EditarExercicio/EditarExercicio"
 
 function App() {
     return (
@@ -16,6 +18,9 @@ function App() {
                 <Route path="/fichasTreino/criar" element={<NovoFichaTreino />} />
                 <Route path="/fichasTreino/:id" element={<VisualizarFichaTreino />} />
                 <Route path="/registrarTreino/:id" element={<RegistrarTreino />} />
+                <Route path="/exercicios/criar/:id" element={<NovoExercicio />} />
+                <Route path="/exercicios/:id/editar" element={<EditarExercicio />} />
+
             </Routes>
         </BrowserRouter>
     );
