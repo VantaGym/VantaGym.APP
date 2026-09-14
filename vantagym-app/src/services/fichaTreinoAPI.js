@@ -6,7 +6,7 @@ const FichaTreinoAPI = {
             const response = await HTTPClient.get(`/FichaTreino/Obter/${fichaTreinoID}`)
             return response.data
         } catch (error) {
-            console.error("Erro ao obter ficha de treino:", error)
+            console.error("Erro ao criar ficha de treino:", error.response?.data)
             throw error
         }
     },
@@ -16,7 +16,7 @@ const FichaTreinoAPI = {
             const response = await HTTPClient.get(`/FichaTreino/Listar`)
             return response.data
         } catch (error) {
-            console.error("Erro ao listar fichas de treino:", error)
+            console.error("RESPOSTA DA API:", error.response?.data)
             throw error
         }
     },

@@ -1,0 +1,237 @@
+.pagina {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #050505;
+    color: #ffffff;
+}
+
+.conteudo {
+    width: 100%;
+    min-height: 90vh;
+    padding: 32px 40px;
+    box-sizing: border-box;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.cabecalho span {
+    color: #d4af37;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.cabecalho h1 {
+    margin: 6px 0 4px 0;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.cabecalho p {
+    margin: 0;
+    color: #777777;
+    font-size: 13px;
+}
+
+.botaoVoltar {
+    height: 42px;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #151515;
+    color: #e5e5e5;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botaoVoltar:hover {
+    background-color: #1b1b1b;
+}
+
+.tabela {
+    width: 100%;
+    background-color: #090909;
+    border: 1px solid #202020;
+    border-radius: 8px;
+}
+
+.tabelaCabecalho {
+    min-height: 52px;
+    padding: 0 22px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 25px;
+    background-color: #0e0e0e;
+    border-bottom: 1px solid #252525;
+    border-radius: 8px 8px 0 0;
+}
+
+.tabelaCabecalho span {
+    color: #888888;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.tabelaLinha {
+    min-height: 70px;
+    padding: 0 22px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 25px;
+    border-bottom: 1px solid #202020;
+    transition: 0.2s;
+}
+
+.tabelaLinha:last-child {
+    border-bottom: none;
+}
+
+.tabelaLinha:hover {
+    background-color: #0d0d0d;
+}
+
+.nomeExercicio {
+    color: #e5e5e5;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tabelaLinha input {
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    background-color: #151515;
+    color: #ffffff;
+    border: 1px solid #303030;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.tabelaLinha input:focus {
+    border-color: #b98a25;
+}
+
+.tabelaLinha input::placeholder {
+    color: #666666;
+}
+
+.vazio {
+    padding: 30px 22px;
+    color: #777777;
+    font-size: 14px;
+    text-align: center;
+}
+
+.mensagemErro {
+    margin-top: 16px;
+    padding: 12px 14px;
+    background-color: #1a0d0d;
+    color: #e06b6b;
+    border: 1px solid #5a2020;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.rodape {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 28px;
+}
+
+.botaoFinalizar {
+    height: 46px;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #b98a25;
+    color: #050505;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botaoFinalizar:hover {
+    background-color: #d4af37;
+}
+
+.modal {
+    background-color: #0a0a0a !important;
+    color: #b5b5b5 !important;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+}
+
+.modal>div {
+    border-color: #2a2a2a;
+}
+
+.tituloModal {
+    color: #d4af37 !important;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .conteudo {
+        padding: 20px 14px;
+    }
+
+    .cabecalho {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .tabelaCabecalho {
+        padding: 0 15px;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 12px;
+    }
+
+    .tabelaLinha {
+        padding: 0 15px;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho {
+        flex-direction: column;
+    }
+
+    .botaoVoltar {
+        width: 100%;
+    }
+
+    .rodape {
+        width: 100%;
+    }
+
+    .botaoFinalizar {
+        width: 100%;
+    }
+}

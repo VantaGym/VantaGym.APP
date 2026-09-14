@@ -18,11 +18,7 @@ export function Home() {
     const [exerciciosUltimoTreino, setExerciciosUltimoTreino] = useState(0);
     const [volumeUltimoTreino, setVolumeUltimoTreino] = useState(0);
 
-    useEffect(() => {
-        carregarHome();
-    }, []);
-
-    async function carregarHome() {
+    const carregarHome = async () => {
         try {
             const usuarioID = 1;
 
@@ -44,8 +40,12 @@ export function Home() {
         } catch (error) {
             console.error("Erro ao carregar Home:", error);
         }
-    }
+    };
 
+    useEffect(() => {
+        carregarHome();
+    }, []);
+    
     return (
         <div className={styles.pagina}>
             <Sidebar>
@@ -92,7 +92,6 @@ export function Home() {
                                     <span>ATIVIDADE RECENTE</span>
                                     <h2>Último treino</h2>
                                 </div>
-
                                 <button onClick={() => navigate("/historico")}>
                                     Ver histórico
                                 </button>

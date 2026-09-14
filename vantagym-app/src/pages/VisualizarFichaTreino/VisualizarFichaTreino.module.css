@@ -1,0 +1,306 @@
+.pagina {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #050505;
+    color: #ffffff;
+}
+
+.conteudo {
+    width: 100%;
+    min-height: 90vh;
+    box-sizing: border-box;
+    padding: 32px 40px;
+}
+
+.cabecalho {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.cabecalho > div:first-child > span {
+    color: #d4af37;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.cabecalho p {
+    margin: 5px 0 0 0;
+    color: #777777;
+    font-size: 13px;
+}
+
+.nomeEditavel {
+    width: 370px;
+    height: 46px;
+    margin: 7px 0 0 0;
+    display: flex;
+    align-items: center;
+    background-color: #0e0e0e;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.nomeEditavel:focus-within {
+    border-color: #b98a25;
+}
+
+.nomeEditavel input {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+    background: none;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.salvar {
+    position: relative;
+    height: 100%;
+}
+
+.salvar button {
+    width: 46px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: #777777;
+    border: none;
+    border-left: 1px solid #2a2a2a;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.salvar button:hover {
+    color: #d4af37;
+}
+
+.salvar > span {
+    position: absolute;
+    top: 52px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 8px;
+    background-color: #181818;
+    color: #cccccc;
+    border: 1px solid #2a2a2a;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.2s;
+    z-index: 20;
+}
+
+.salvar:hover > span {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mensagemSucesso {
+    display: block;
+    margin-top: 6px;
+    color: #d4af37 !important;
+    font-size: 11px !important;
+    font-weight: 500;
+    letter-spacing: 0 !important;
+}
+
+.acoesCabecalho {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.botaoVoltar {
+    height: 42px;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #151515;
+    color: #e5e5e5;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botaoVoltar:hover {
+    background-color: #1b1b1b;
+}
+
+.botaoAdicionar {
+    height: 42px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #b98a25;
+    color: #050505;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botaoAdicionar:hover {
+    background-color: #d4af37;
+}
+
+.tabela {
+    width: 100%;
+    background-color: #090909;
+    border: 1px solid #202020;
+    border-radius: 8px;
+}
+
+.tabelaCabecalho {
+    min-height: 52px;
+    padding: 0 22px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1fr 100px;
+    align-items: center;
+    background-color: #0e0e0e;
+    border-bottom: 1px solid #252525;
+    border-radius: 8px 8px 0 0;
+}
+
+.tabelaCabecalho span {
+    color: #888888;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.tabelaLinha {
+    min-height: 62px;
+    padding: 0 22px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1fr 100px;
+    align-items: center;
+    border-bottom: 1px solid #202020;
+    transition: 0.2s;
+}
+
+.tabelaLinha:last-child {
+    border-bottom: none;
+}
+
+.tabelaLinha:hover {
+    background-color: #0d0d0d;
+}
+
+.tabelaLinha > span {
+    color: #e5e5e5;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.acoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.acoes button {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: #777777;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.acoes button:hover {
+    color: #d4af37;
+}
+
+.vazio {
+    padding: 30px 22px;
+    color: #777777;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .conteudo {
+        padding: 20px 14px;
+    }
+
+    .cabecalho {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .nomeEditavel {
+        width: 320px;
+    }
+
+    .nomeEditavel input {
+        font-size: 21px;
+    }
+
+    .acoesCabecalho {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tabelaCabecalho {
+        padding: 0 15px;
+        grid-template-columns: 2fr 1.5fr 1fr 1fr 60px;
+    }
+
+    .tabelaLinha {
+        padding: 0 15px;
+        grid-template-columns: 2fr 1.5fr 1fr 1fr 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho {
+        flex-direction: column;
+    }
+
+    .nomeEditavel {
+        width: 100%;
+    }
+
+    .acoesCabecalho {
+        width: 100%;
+    }
+
+    .botaoVoltar {
+        width: 100%;
+    }
+
+    .botaoAdicionar {
+        width: 100%;
+    }
+}

@@ -24,7 +24,7 @@ export function Sidebar({ children }) {
                 </div>
 
                 <div className={style.sidebar_corpo}>
-                    <SidebarItem texto="Meus Treinos" link="/home" logo={<FaDumbbell />} />
+                    <SidebarItem texto="Meus Treinos" link="/fichastreino" logo={<FaDumbbell />} />
                 </div>
 
                 <div className={style.sidebar_corpo}>

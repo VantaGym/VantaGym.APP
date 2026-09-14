@@ -1,0 +1,296 @@
+.pagina {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #050505;
+    color: #ffffff;
+}
+
+.conteudo {
+    width: 100%;
+    min-height: 90vh;
+    box-sizing: border-box;
+    padding: 32px 40px;
+}
+
+.cabecalho {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.cabecalho span {
+    color: #d4af37;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.cabecalho h1 {
+    margin: 7px 0 5px 0;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.cabecalho p {
+    margin: 0;
+    color: #777777;
+    font-size: 13px;
+}
+
+.botaoCriar {
+    height: 42px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #b98a25;
+    color: #050505;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botaoCriar:hover {
+    background-color: #d4af37;
+}
+
+.tabela {
+    width: 100%;
+    background-color: #090909;
+    border: 1px solid #202020;
+    border-radius: 8px;
+}
+
+.tabelaCabecalho {
+    min-height: 52px;
+    padding: 0 22px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    background-color: #0e0e0e;
+    border-bottom: 1px solid #252525;
+    border-radius: 8px 8px 0 0;
+}
+
+.tabelaCabecalho span {
+    color: #888888;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.centralizado {
+    text-align: center;
+}
+
+.tabelaLinha {
+    min-height: 62px;
+    padding: 0 22px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    border-bottom: 1px solid #202020;
+    transition: 0.2s;
+}
+
+.tabelaLinha:last-child {
+    border-bottom: none;
+}
+
+.tabelaLinha:hover {
+    background-color: #0d0d0d;
+}
+
+.nomeFicha {
+    color: #e5e5e5;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.gruposMusculares {
+    color: #e5e5e5;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.acoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.acao {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.acao button {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: #777777;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.acao button:hover {
+    color: #d4af37;
+}
+
+.acao>span {
+    position: absolute;
+    top: 27px;
+    padding: 5px 8px;
+    background-color: #181818;
+    color: #cccccc;
+    border: 1px solid #2a2a2a;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.2s;
+    z-index: 20;
+}
+
+.acao:hover>span {
+    opacity: 1;
+    visibility: visible;
+}
+
+.botaoIniciar:hover {
+    color: #d4af37 !important;
+}
+
+.botaoExcluir:hover {
+    color: #c95757 !important;
+}
+
+.vazio {
+    padding: 30px 22px;
+    color: #777777;
+    font-size: 14px;
+    text-align: center;
+}
+
+.modal {
+    background-color: #0a0a0a !important;
+    color: #b5b5b5 !important;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+}
+
+.modal>div {
+    border-color: #2a2a2a;
+}
+
+.modal h5 {
+    color: #ffffff !important;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.modal button {
+    box-shadow: none !important;
+}
+
+.botaoCancelar {
+    background-color: transparent !important;
+    color: #d4af37 !important;
+    border: 1px solid #d4af37 !important;
+    transition: 0.2s;
+}
+
+.botaoCancelar:hover {
+    background-color: #1c1a12 !important;
+    color: #e0bd48 !important;
+    border-color: #e0bd48 !important;
+}
+
+.botaoDeletar {
+    background-color: #a83232 !important;
+    color: #ffffff !important;
+    border: 1px solid #a83232 !important;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.botaoDeletar:hover {
+    background-color: #bd3a3a !important;
+    border-color: #bd3a3a !important;
+    color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+    .conteudo {
+        padding: 20px 14px;
+    }
+
+    .cabecalho {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .cabecalho h1 {
+        font-size: 24px;
+    }
+
+    .cabecalho p {
+        font-size: 12px;
+    }
+
+    .botaoCriar {
+        padding: 0 14px;
+        white-space: nowrap;
+    }
+
+    .tabelaCabecalho {
+        padding: 0 15px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .tabelaLinha {
+        padding: 0 15px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .acoes {
+        gap: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho {
+        flex-direction: column;
+    }
+
+    .botaoCriar {
+        width: 100%;
+    }
+
+    .gruposMusculares {
+        font-size: 10px;
+    }
+
+    .acoes {
+        gap: 10px;
+    }
+}

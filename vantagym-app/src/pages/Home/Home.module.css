@@ -36,66 +36,6 @@
     font-size: 13px;
 }
 
-.treinoHoje {
-    width: 100%;
-    min-height: 130px;
-    box-sizing: border-box;
-    padding: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: linear-gradient(110deg, rgba(212, 175, 55, 0.09), #0c0c0c 35%);
-    border: 1px solid #282318;
-    border-left: 3px solid #b98a25;
-    border-radius: 8px;
-    margin-bottom: 16px;
-    transition: 0.2s;
-}
-
-.treinoHoje:hover {
-    border-color: #4a3b18;
-    border-left-color: #d4af37;
-}
-
-.treinoInformacoes span {
-    color: #d4af37;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-}
-
-.treinoInformacoes h2 {
-    margin: 8px 0 6px 0;
-    color: #eeeeee;
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.treinoInformacoes p {
-    margin: 0;
-    color: #666666;
-    font-size: 12px;
-}
-
-.botaoTreino {
-    min-width: 140px;
-    height: 43px;
-    padding: 0 22px;
-    background: linear-gradient(135deg, #e8c34b, #b78924);
-    border: none;
-    border-radius: 5px;
-    color: #080808;
-    font-size: 12px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.botaoTreino:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(212, 175, 55, 0.15);
-}
-
 .cards {
     width: 100%;
     display: grid;
