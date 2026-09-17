@@ -21,11 +21,10 @@ const FichaTreinoAPI = {
         }
     },
 
-    async criarAsync(nome, usuarioID) {
+    async criarAsync(nome) {
         try {
             const fichaCriar = {
-                Nome: nome,
-                UsuarioID: usuarioID
+                Nome: nome
             }
             const response = await HTTPClient.post(`/FichaTreino/Criar`, fichaCriar)
             return response.data

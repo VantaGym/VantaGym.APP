@@ -20,9 +20,7 @@ export function Home() {
 
     const carregarHome = async () => {
         try {
-            const usuarioID = 1;
-
-            const usuarioResponse = await UsuarioAPI.obterAsync(usuarioID);
+            const usuarioResponse = await UsuarioAPI.obterAsync();
             const treinosSemanaResponse = await HistoricoTreinoAPI.obterQuantidadeTreinosSemanaAsync();
             const tempoUltimoTreinoResponse = await HistoricoTreinoAPI.obterTempoDesdeUltimoTreinoAsync();
             const volumeSemanaResponse = await HistoricoTreinoAPI.obterVolumeSemanaAsync();

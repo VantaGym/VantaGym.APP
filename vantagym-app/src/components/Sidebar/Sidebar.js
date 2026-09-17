@@ -34,10 +34,6 @@ export function Sidebar({ children }) {
                 <div className={style.sidebar_corpo}>
                     <SidebarItem texto="Histórico" link="/home" logo={<FaCalendarCheck />} />
                 </div>
-
-                <div className={style.sidebar_corpo}>
-                    <SidebarItem texto="Evolução" link="/home" logo={<BsGraphUp />} />
-                </div>
             </div>
 
             <div className={style.pagina_conteudo}>

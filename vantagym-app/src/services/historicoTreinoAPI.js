@@ -21,15 +21,14 @@ const HistoricoTreinoAPI = {
         }
     },
 
-    async criarAsync(seriesFeitas, cargaKg, repeticoesFeitas, dataExecucao, exercicioID, fichaTreinoID) {
+    async criarAsync(seriesFeitas, cargaKg, repeticoesFeitas, dataExecucao, exercicioID) {
         try {
             const historicoCriar = {
                 SeriesFeitas: seriesFeitas,
                 CargaKg: cargaKg,
                 RepeticoesFeitas: repeticoesFeitas,
                 DataExecucao: dataExecucao,
-                ExercicioID: exercicioID,
-                FichaTreinoID: fichaTreinoID
+                ExercicioID: exercicioID
             }
             const response = await HTTPClient.post(`/HistoricoTreino/Criar`, historicoCriar)
             return response.data

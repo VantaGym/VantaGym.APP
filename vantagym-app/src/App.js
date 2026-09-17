@@ -7,20 +7,20 @@ import { VisualizarFichaTreino } from "./pages/VisualizarFichaTreino/VisualizarF
 import { RegistrarTreino } from "./pages/RegistrarTreino/RegistrarTreino"
 import { NovoExercicio } from "./pages/NovoExercicio/NovoExercicio"
 import { EditarExercicio } from "./pages/EditarExercicio/EditarExercicio"
+import { RotaPrivada } from "./components/RotaPrivada/RotaPrivada";
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Login />} />
-                <Route path="/home" element={<Home />} />
-                <Route path="/fichastreino" element={<FichasTreino />} />
-                <Route path="/fichasTreino/criar" element={<NovoFichaTreino />} />
-                <Route path="/fichasTreino/:id" element={<VisualizarFichaTreino />} />
-                <Route path="/registrarTreino/:id" element={<RegistrarTreino />} />
-                <Route path="/exercicios/criar/:id" element={<NovoExercicio />} />
-                <Route path="/exercicios/:id/editar" element={<EditarExercicio />} />
-
+                <Route path="/home" element={<RotaPrivada><Home /></RotaPrivada>} />
+                <Route path="/fichastreino" element={<RotaPrivada><FichasTreino /></RotaPrivada>} />
+                <Route path="/fichasTreino/criar" element={<RotaPrivada><NovoFichaTreino /></RotaPrivada>} />
+                <Route path="/fichasTreino/:id" element={<RotaPrivada><VisualizarFichaTreino /></RotaPrivada>} />
+                <Route path="/registrarTreino/:id" element={<RotaPrivada><RegistrarTreino /></RotaPrivada>} />
+                <Route path="/exercicios/criar/:id" element={<RotaPrivada><NovoExercicio /></RotaPrivada>} />
+                <Route path="/exercicios/:id/editar" element={<RotaPrivada><EditarExercicio /></RotaPrivada>} />
             </Routes>
         </BrowserRouter>
     );

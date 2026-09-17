@@ -39,7 +39,6 @@
     height: auto;
     object-fit: contain;
     margin-bottom: 35px;
-    filter: drop-shadow(0 -10px 25px rgba(212, 175, 55, 0.22)) drop-shadow(0 0 12px rgba(212, 175, 55, 0.10));
 }
 
 .form {
@@ -87,7 +86,6 @@
 
 .input:focus {
     border-color: #c9a33b;
-    box-shadow: 0 0 0 2px rgba(201, 163, 59, 0.08), 0 0 12px rgba(201, 163, 59, 0.05);
 }
 
 .inputSenha {

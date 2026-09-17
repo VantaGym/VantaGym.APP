@@ -18,8 +18,7 @@ export function NovoFichaTreino() {
         e.preventDefault();
 
         try {
-            const usuarioID = 1;
-            await FichaTreinoAPI.criarAsync(nome, usuarioID);
+            await FichaTreinoAPI.criarAsync(nome);
             setMostrarModal(true);
             setTimeout(() => {
                 setMostrarModal(false);

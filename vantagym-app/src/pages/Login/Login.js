@@ -4,6 +4,7 @@ import style from "./Login.module.css"
 import LogoVantaGym from "../../assets/logo_png.png"
 import Modal from "react-bootstrap/Modal"
 import { MdEmail, MdLock, MdVisibility, MdVisibilityOff } from "react-icons/md"
+import UsuarioAPI from "../../services/usuarioAPI"
 
 
 export function Login() {
@@ -19,13 +20,16 @@ export function Login() {
     const handleEntrar = async (e) => {
         e.preventDefault();
         setErro('');
+
         if (!email || !senha) {
             setErro('Preencha o e-mail e a senha');
             return;
         }
         setCarregando(true);
-
         try {
+            const usuario = await UsuarioAPI.loginAsync(email, senha);
+            localStorage.setItem("token", usuario.token);
+            
             setMostrarModal(true);
             setTimeout(() => {
                 setMostrarModal(false);
@@ -33,7 +37,11 @@ export function Login() {
             }, 1300);
         } catch (error) {
             console.error(error);
-            setErro('Erro ao entrar');
+            if (typeof error.response?.data === "string") {
+                setErro(error.response.data);
+            } else {
+                setErro('Erro ao entrar');
+            }
         } finally {
             setCarregando(false);
         }
