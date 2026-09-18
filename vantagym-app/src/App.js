@@ -7,6 +7,7 @@ import { VisualizarFichaTreino } from "./pages/VisualizarFichaTreino/VisualizarF
 import { RegistrarTreino } from "./pages/RegistrarTreino/RegistrarTreino"
 import { NovoExercicio } from "./pages/NovoExercicio/NovoExercicio"
 import { EditarExercicio } from "./pages/EditarExercicio/EditarExercicio"
+import { HistoricoTreino } from "./pages/HistoricoTreino/HistoricoTreino"
 import { RotaPrivada } from "./components/RotaPrivada/RotaPrivada";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/registrarTreino/:id" element={<RotaPrivada><RegistrarTreino /></RotaPrivada>} />
                 <Route path="/exercicios/criar/:id" element={<RotaPrivada><NovoExercicio /></RotaPrivada>} />
                 <Route path="/exercicios/:id/editar" element={<RotaPrivada><EditarExercicio /></RotaPrivada>} />
+                <Route path="/historico" element={<RotaPrivada><HistoricoTreino /></RotaPrivada>} />
             </Routes>
         </BrowserRouter>
     );

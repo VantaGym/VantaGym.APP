@@ -32,7 +32,7 @@ export function Sidebar({ children }) {
                 </div>
 
                 <div className={style.sidebar_corpo}>
-                    <SidebarItem texto="Histórico" link="/home" logo={<FaCalendarCheck />} />
+                    <SidebarItem texto="Histórico" link="/historico" logo={<FaCalendarCheck />} />
                 </div>
             </div>
 
