@@ -54,7 +54,6 @@
     font-size: 13px;
     font-weight: 700;
     cursor: pointer;
-    transition: 0.2s;
 }
 
 .botaoCriar:hover {
@@ -86,7 +85,7 @@
     font-weight: 700;
 }
 
-.centralizado {
+.centralizar {
     text-align: center;
 }
 
@@ -98,11 +97,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     border-bottom: 1px solid #202020;
-    transition: 0.2s;
-}
-
-.tabelaLinha:last-child {
-    border-bottom: none;
 }
 
 .tabelaLinha:hover {
@@ -146,7 +140,6 @@
     border: none;
     font-size: 15px;
     cursor: pointer;
-    transition: 0.2s;
 }
 
 .acao button:hover {
@@ -167,8 +160,6 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: 0.2s;
-    z-index: 20;
 }
 
 .acao:hover>span {
@@ -216,7 +207,6 @@
     background-color: transparent !important;
     color: #d4af37 !important;
     border: 1px solid #d4af37 !important;
-    transition: 0.2s;
 }
 
 .botaoCancelar:hover {
@@ -230,7 +220,6 @@
     color: #ffffff !important;
     border: 1px solid #a83232 !important;
     font-weight: 600;
-    transition: 0.2s;
 }
 
 .botaoDeletar:hover {

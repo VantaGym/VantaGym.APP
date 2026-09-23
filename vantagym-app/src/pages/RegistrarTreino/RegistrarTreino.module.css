@@ -52,7 +52,6 @@
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.2s;
 }
 
 .botaoVoltar:hover {
@@ -94,7 +93,6 @@
     align-items: center;
     gap: 25px;
     border-bottom: 1px solid #202020;
-    transition: 0.2s;
 }
 
 .tabelaLinha:last-child {
@@ -122,7 +120,6 @@
     border-radius: 6px;
     outline: none;
     font-size: 14px;
-    transition: 0.2s;
 }
 
 .tabelaLinha input:focus {
@@ -171,7 +168,6 @@
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
-    transition: 0.2s;
 }
 
 .botaoFinalizar:hover {

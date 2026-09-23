@@ -47,8 +47,6 @@
     background-color: #090909;
     border: 1px solid #202020;
     border-radius: 8px;
-    border-collapse: separate;
-    border-spacing: 0;
     overflow: hidden;
 }
 
@@ -60,7 +58,7 @@
     border-bottom: 1px solid #252525;
     font-size: 12px;
     font-weight: 700;
-    text-align: left;
+    text-align: center;
 }
 
 .tabela td {
@@ -70,18 +68,11 @@
     border-bottom: 1px solid #202020;
     font-size: 14px;
     font-weight: 500;
-}
-
-.tabela tbody tr {
-    transition: 0.2s;
+    text-align: center;
 }
 
 .tabela tbody tr:hover {
     background-color: #0d0d0d;
-}
-
-.tabela tbody tr:last-child td {
-    border-bottom: none;
 }
 
 .vazio {

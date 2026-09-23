@@ -37,11 +37,7 @@ export function Login() {
             }, 1300);
         } catch (error) {
             console.error(error);
-            if (typeof error.response?.data === "string") {
-                setErro(error.response.data);
-            } else {
-                setErro('Erro ao entrar');
-            }
+            setErro("Email ou senha inválidos!")
         } finally {
             setCarregando(false);
         }

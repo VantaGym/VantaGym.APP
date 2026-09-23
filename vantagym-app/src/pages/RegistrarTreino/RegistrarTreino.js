@@ -75,7 +75,7 @@ export function RegistrarTreino() {
             if (typeof error.response?.data === "string") {
                 setMensagemErro(error.response.data);
             } else {
-                setMensagemErro("Preencha todos os campos corretamente!");
+                setMensagemErro("Não foi possível finalizar o treino. Tente novamente.");
             }
         }
     };

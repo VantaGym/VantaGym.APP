@@ -6,7 +6,6 @@ import { IoHome } from "react-icons/io5"
 import { FaDumbbell } from "react-icons/fa6"
 import { FaPlus } from "react-icons/fa"
 import { FaCalendarCheck } from "react-icons/fa"
-import { BsGraphUp } from "react-icons/bs"
 
 export function Sidebar({ children }) {
     return (
@@ -28,7 +27,7 @@ export function Sidebar({ children }) {
                 </div>
 
                 <div className={style.sidebar_corpo}>
-                    <SidebarItem texto="Montar Treino" link="/home" logo={<FaPlus />} />
+                    <SidebarItem texto="Montar Treino" link="/montartreino" logo={<FaPlus />} />
                 </div>
 
                 <div className={style.sidebar_corpo}>

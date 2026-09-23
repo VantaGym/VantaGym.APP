@@ -51,7 +51,6 @@
     background-color: #090909;
     border: 1px solid #202020;
     border-radius: 8px;
-    transition: 0.2s;
 }
 
 .card:hover {
@@ -96,7 +95,6 @@
     background-color: #080808;
     border: 1px solid #202020;
     border-radius: 8px;
-    transition: 0.2s;
 }
 
 .atividade:hover {
@@ -133,7 +131,6 @@
     color: #d4af37;
     font-size: 11px;
     cursor: pointer;
-    transition: 0.2s;
 }
 
 .atividadeTopo button:hover {

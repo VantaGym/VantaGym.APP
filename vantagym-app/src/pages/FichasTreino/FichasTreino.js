@@ -80,8 +80,8 @@ export function FichasTreino() {
                         <div className={style.tabela}>
                             <div className={style.tabelaCabecalho}>
                                 <span>Nome</span>
-                                <span className={style.centralizado}>Grupo muscular</span>
-                                <span className={style.centralizado}>Ações</span>
+                                <span className={style.centralizar}>Grupo muscular</span>
+                                <span className={style.centralizar}>Ações</span>
                             </div>
 
                             {fichas.map((ficha) => (

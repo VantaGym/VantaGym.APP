@@ -48,12 +48,11 @@ export function NovoExercicio() {
                 navigate(`/fichasTreino/${id}`);
             }, 1300);
         } catch (error) {
-            console.error("Erro ao criar exercício:", error);
-
+            console.error("Erro ao finalizar treino:", error);
             if (typeof error.response?.data === "string") {
                 setMensagemErro(error.response.data);
             } else {
-                setMensagemErro("Preencha os campos corretamente!");
+                setMensagemErro("Não foi possível finalizar o treino. Tente novamente.");
             }
         }
     };
