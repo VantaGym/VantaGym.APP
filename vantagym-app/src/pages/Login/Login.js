@@ -109,11 +109,7 @@ export function Login() {
                 </form>
             </div>
 
-            <Modal show={mostrarModal}
-                backdrop="static"
-                keyboard={false}
-                dialogClassName={style.modalPosicao}
-                contentClassName={style.modalConteudo}
+            <Modal show={mostrarModal} dialogClassName={style.modalPosicao} contentClassName={style.modalConteudo}
             >
                 <Modal.Header className={style.modalHeader}>
                     <Modal.Title className={style.modalTitulo}>

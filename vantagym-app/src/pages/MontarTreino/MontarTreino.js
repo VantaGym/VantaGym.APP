@@ -96,6 +96,8 @@ export function MontarTreino() {
                                 <Form.Label>Idade</Form.Label>
                                 <Form.Control
                                     type="number"
+                                    min="1"
+                                    max="100"
                                     placeholder="Ex: 25"
                                     value={idade}
                                     onChange={(e) => setIdade(e.target.value)}
@@ -107,6 +109,7 @@ export function MontarTreino() {
                                 <Form.Label>Peso (kg)</Form.Label>
                                 <Form.Control
                                     type="number"
+                                    min="1"
                                     placeholder="Ex: 70"
                                     value={peso}
                                     onChange={(e) => setPeso(e.target.value)}
@@ -118,6 +121,7 @@ export function MontarTreino() {
                                 <Form.Label>Altura (cm)</Form.Label>
                                 <Form.Control
                                     type="number"
+                                    min="1"
                                     placeholder="Ex: 175"
                                     value={altura}
                                     onChange={(e) => setAltura(e.target.value)}
@@ -159,6 +163,8 @@ export function MontarTreino() {
                                 <Form.Label>Dias por semana</Form.Label>
                                 <Form.Control
                                     type="number"
+                                    min="1"
+                                    max="7"
                                     placeholder="Ex: 4"
                                     value={diasPorSemana}
                                     onChange={(e) => setDiasPorSemana(e.target.value)}
@@ -170,6 +176,7 @@ export function MontarTreino() {
                                 <Form.Label>Minutos por treino</Form.Label>
                                 <Form.Control
                                     type="number"
+                                    min="10"
                                     placeholder="Ex: 60"
                                     value={minutosPorTreino}
                                     onChange={(e) => setMinutosPorTreino(e.target.value)}

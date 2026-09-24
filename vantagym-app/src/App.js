@@ -9,6 +9,7 @@ import { NovoExercicio } from "./pages/NovoExercicio/NovoExercicio"
 import { EditarExercicio } from "./pages/EditarExercicio/EditarExercicio"
 import { HistoricoTreino } from "./pages/HistoricoTreino/HistoricoTreino"
 import { MontarTreino } from "./pages/MontarTreino/MontarTreino";
+import { Cadastro } from "./pages/Cadastro/Cadastro";
 import { RotaPrivada } from "./components/RotaPrivada/RotaPrivada";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Login />} />
+                <Route path="/cadastro" element={<Cadastro />} />
                 <Route path="/home" element={<RotaPrivada><Home /></RotaPrivada>} />
                 <Route path="/fichastreino" element={<RotaPrivada><FichasTreino /></RotaPrivada>} />
                 <Route path="/fichasTreino/criar" element={<RotaPrivada><NovoFichaTreino /></RotaPrivada>} />
