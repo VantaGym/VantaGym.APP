@@ -32,8 +32,6 @@ export function Cadastro() {
             } catch (error) {
                 console.error("Erro ao criar conta:", error);
             }
-        } else {
-            alert('Por favor, preencha todos os campos.');
         }
     };
 

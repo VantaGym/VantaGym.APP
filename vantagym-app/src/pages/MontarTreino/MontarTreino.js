@@ -27,7 +27,7 @@ export function MontarTreino() {
     const [mensagemErro, setMensagemErro] = useState("");
     const [mostrarModal, setMostrarModal] = useState(false)
 
-    async function handleGerarTreino(e) {
+    const handleGerarTreino = async (e) => {
         e.preventDefault();
 
         try {
@@ -38,12 +38,13 @@ export function MontarTreino() {
 
             setTreino(response);
         } catch (error) {
-            console.error("Erro ao gerar treino:", error);
+            console.error("Erro ao salvar treino:", error);
+            setMensagemErro("Não foi possível salvar o treino. Tente novamente.");
         } finally {
             setCarregando(false);
         }
     }
-    async function handleSalvarTreino() {
+    const handleSalvarTreino = async () => {
         try {
             setSalvando(true);
             setMensagemErro("");
@@ -110,6 +111,7 @@ export function MontarTreino() {
                                 <Form.Control
                                     type="number"
                                     min="1"
+                                    max="200"
                                     placeholder="Ex: 70"
                                     value={peso}
                                     onChange={(e) => setPeso(e.target.value)}

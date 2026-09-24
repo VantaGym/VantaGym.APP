@@ -54,31 +54,36 @@ export function RegistrarTreino() {
     };
 
     const handleFinalizarTreino = async () => {
-        try {
-            setMensagemErro("");
-            for (const exercicio of exercicios) {
-                await HistoricoTreinoAPI.criarAsync(
-                    exercicio.seriesFeitas,
-                    exercicio.cargaKg,
-                    exercicio.repeticoesFeitas,
-                    exercicio.id,
-                    ficha.id
-                );
-            }
-            setMostrarModal(true);
-            setTimeout(() => {
-                setMostrarModal(false);
-                navigate("/fichasTreino");
-            }, 1300);
-        } catch (error) {
-            console.error("Erro ao finalizar treino:", error);
-            if (typeof error.response?.data === "string") {
-                setMensagemErro(error.response.data);
-            } else {
-                setMensagemErro("Não foi possível finalizar o treino. Tente novamente.");
-            }
+    try {
+        setMensagemErro("");
+
+        const dataExecucao = new Date().toISOString();
+
+        for (const exercicio of exercicios) {
+            await HistoricoTreinoAPI.criarAsync(
+                exercicio.seriesFeitas,
+                exercicio.cargaKg,
+                exercicio.repeticoesFeitas,
+                dataExecucao,
+                exercicio.id
+            );
         }
-    };
+
+        setMostrarModal(true);
+
+        setTimeout(() => {
+            setMostrarModal(false);
+            navigate("/fichasTreino");
+        }, 1300);
+    } catch (error) {
+        console.error("Erro ao finalizar treino:", error);
+        if (typeof error.response?.data === "string") {
+            setMensagemErro(error.response.data);
+        } else {
+            setMensagemErro("Não foi possível finalizar o treino. Tente novamente.");
+        }
+    }
+};
 
     useEffect(() => {
         carregarFicha();
